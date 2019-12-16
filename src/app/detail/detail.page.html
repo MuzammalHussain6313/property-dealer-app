@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="list"></ion-back-button>
+    </ion-buttons>
+    <ion-button slot="end" (click)="deleteStudent()">
+      <ion-icon name="trash"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+<!--    <img src="/assets/quran-majeed.jpg" alt="" />-->
+    <ion-card-header>
+      <ion-card-subtitle>{{singleStudent?.student_id}}</ion-card-subtitle>
+      <ion-card-title>Welcome to: {{singleStudent?.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{singleStudent?.email}} and database id is {{singleStudent?._id}} <br> Now that your app has been created, you'll want to start building out features and
+        components. Check out some of the resources below for next steps.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
