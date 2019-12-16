@@ -1,20 +1,32 @@
-<p>Menu</p><br>
-<img src="screen-shorts/21.PNG" width="700" height="700">
+A property deade application with have following.
 
-<p>Home</p><br>
-<img src="screen-shorts/2.PNG" width="700" height="700">
+Tools and technologies <br/>
+•	Hybrid Application, where Ionic framework and angular used for front-end.<br/>
+•	Firebase/mongo dB database and node.js will be used for backed work. 
 
-<p>Delete item</p><br>
-<img src="screen-shorts/23.PNG" width="700" height="700">
+Features in our Application.
+1.	Customer’s registration <br/>
+•	Customer will be able to create new account.<br/>
+•	Sign in and forgot password options will also be provided.<br/>
 
-<p>Update Item</p><br>
-<img src="screen-shorts/24.PNG" width="700" height="700">
+2.	Dealer registration <br/>
+•	New can will be able to the application. <br/>
+•	Sign in and forgot password options will also be provided. <br/>
 
-<p>details</p><br>
-<img src="screen-shorts/25.PNG" width="700" height="700">
+3.	Admin registration <br/>
+•	There is functionality to add new administration to the system.<br/>
+•	Sign in and forgot password options will also be provided. <br/>
 
-<p>Add new Item</p><br>
-<img src="screen-shorts/26.PNG" width="700" height="700">
+4.	Customers Dashboard <br/>
+•	Customer will be able to view list of property with details. <br/>
+•	After viewing the different properties, Customer will be able to contact with the property dealer and can fix the rate etc.
 
-<p>Show List</p><br>
-<img src="screen-shorts/26.PNG" width="700" height="700">
+5.	Admin Dashboard <br/>
+•	Admin will able to manage (CRUD) the records of users. <br/>
+•	Users will able to contact with admin.
+
+6.	Dealer Dashboard <br/>
+•	Dealer will able Add new property for sale. <br/>
+•	Dealer will able to remove the soled property. <br/>
+•	Dealer can update information of the property if there is an error while           entering the data.
+
