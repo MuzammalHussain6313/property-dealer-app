@@ -44,7 +44,7 @@ export class UpdatePage implements OnInit {
             type: [null, [Validators.required]],
             area: [null, [Validators.required]],
             price: [null, [Validators.required]],
-            contactNumber: [null, [Validators.required]],
+            contact: [null, [Validators.required]],
             description: [null, [Validators.required]],
             location: [null, [Validators.required]]
         });
