@@ -16,33 +16,37 @@ export class UpdatePage implements OnInit {
               private http: HttpClient,
               private router: Router,
               private formBuilder: FormBuilder) { }
-  studentList: any;
-  singleStudent;
+  propertyList: any;
+  singleProperty;
 
   ngOnInit() {
       this.formInitializer();
 
       this.http
-          .get('https://test-node-api-test.herokuapp.com/students/getStudents')
+          .get('http://localhost:3000/properties/getProperties')
           .subscribe(res => {
-              this.studentList = res;
+              this.propertyList = res;
               this.route.paramMap.subscribe(paramMap => {
                   const val = paramMap.get('id');
-                  this.singleStudent = this.studentList.find(obj => {
-                      return obj.student_id.includes(val);
+                  this.singleProperty = this.propertyList.find(obj => {
+                      return obj._id.includes(val);
                   });
 
-                  this.signupForm.patchValue(this.singleStudent);
+                  this.signupForm.patchValue(this.singleProperty);
               });
           });
   }
 
     formInitializer() {
-        console.log('fi', this.singleStudent);
+        console.log('fi', this.singleProperty);
         this.signupForm = this.formBuilder.group({
-            name: [null, [Validators.required]],
-            email: [null, [Validators.required, Validators.email]],
-            student_id: [null, [Validators.required]]
+            owner: [null, [Validators.required]],
+            type: [null, [Validators.required]],
+            area: [null, [Validators.required]],
+            price: [null, [Validators.required]],
+            contactNumber: [null, [Validators.required]],
+            description: [null, [Validators.required]],
+            location: [null, [Validators.required]]
         });
     }
 
@@ -64,8 +68,7 @@ export class UpdatePage implements OnInit {
     }
 
     saveHttpReq(dataObj): Observable<any> {
-        // const url = 'http://test-node-api-test.herokuapp.com/students/newStudent'; // Thos link is working coorectly.
-        const url = `https://test-node-api-test.herokuapp.com/students/${this.singleStudent._id}`;
+        const url = `http://localhost:3000/properties/${this.singleProperty._id}`;
         console.log('link', url);
         return this.http.patch(url, dataObj);
     }

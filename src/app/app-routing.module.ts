@@ -16,7 +16,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: './list/list.module#ListPageModule'
+        loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
       },
       {
         path: ':id',
@@ -25,14 +25,10 @@ const routes: Routes = [
       ]
   },
   {
-    path: 'signup',
-    loadChildren: './signup/signup.module#SignupPageModule'
+    path: 'addProperty',
+    loadChildren: () => import('./addProperty/addProperty.module').then(m => m.AddPropertyPageModule)
   },
-  {
-    path: 'add-surah',
-    loadChildren: './add-surah/add-surah.module#AddSurahPageModule'
-  },
-  { path: 'setting', loadChildren: './setting/setting.module#SettingPageModule' },
+  { path: 'setting', loadChildren: () => import('./setting/setting.module').then(m => m.SettingPageModule) },
   {
     path: 'update',
     children: [

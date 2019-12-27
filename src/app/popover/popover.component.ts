@@ -17,24 +17,25 @@ export class PopoverComponent implements OnInit {
               private router: Router,
               private http: HttpClient,
               private route: ActivatedRoute) { }
-  id: number;
-  studentList: any;
-  singleStudent;
+  id;
+  propertyList: any;
+  singleProperty;
   ngOnInit() {
-    this.id = this.navParams.data.student_id;
-    this.http.get('https://test-node-api-test.herokuapp.com/students/getStudents').subscribe(res => {
-      this.studentList = res;
+    this.id = this.navParams.data._id;
+    console.log('id ' + this.id);
+    this.http.get('http://localhost:3000/properties/getProperties').subscribe(res => {
+      this.propertyList = res;
       this.route.paramMap.subscribe(paramMap => {
-        this.singleStudent = this.studentList.find(obj => {
+        this.singleProperty = this.propertyList.find(obj => {
           return obj._id.includes(this.id);
         });
       });
     });
   }
 
-  deleteStudent() {
-    console.log('formData ' + this.singleStudent._id);
-    this.callAPI(this.singleStudent).subscribe(
+  deleteProperty() {
+    console.log('formData ' + this.singleProperty._id);
+    this.callAPI(this.singleProperty).subscribe(
         data => {
           console.log('I got this response -> ', data);
           this.router.navigate(['list']);
@@ -48,7 +49,7 @@ export class PopoverComponent implements OnInit {
   }
 
   callAPI(student): Observable<any> {
-    const url = `https://test-node-api-test.herokuapp.com/students/${this.singleStudent._id}`;
+    const url = `http://localhost:3000/properties/${this.singleProperty._id}`;
     console.log('link', url);
     return this.http.delete(url);
     // console.log('id : ' + student._id);
@@ -56,7 +57,7 @@ export class PopoverComponent implements OnInit {
     // return this.http.post(link, student);
   }
   updateItem() {
-    const id = this.singleStudent.student_id;
+    const id = this.singleProperty._id;
     const url = `update/${id}`;
     console.log(url);
     this.router.navigateByUrl(url);

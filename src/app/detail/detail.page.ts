@@ -17,24 +17,24 @@ export class DetailPage implements OnInit {
     ) {
     }
 
-    studentList: any;
-    singleStudent;
+    propertyList: any;
+    singleProperty;
 
     ngOnInit() {
-        this.http.get('https://test-node-api-test.herokuapp.com/students/getStudents').subscribe(res => {
-            this.studentList = res;
+        this.http.get('http://localhost:3000/properties/getProperties').subscribe(res => {
+            this.propertyList = res;
             this.route.paramMap.subscribe(paramMap => {
                 const val = paramMap.get('id');
-                this.singleStudent = this.studentList.find(obj => {
-                    return obj.student_id.includes(val);
+                this.singleProperty = this.propertyList.find(obj => {
+                    return obj._id.includes(val);
                 });
             });
         });
     }
 
     deleteStudent() {
-        console.log('formData ' + this.singleStudent._id);
-        this.callAPI(this.singleStudent).subscribe(
+        console.log('formData ' + this.singleProperty._id);
+        this.callAPI(this.singleProperty).subscribe(
             data => {
                 console.log('I got this response -> ', data);
                 this.router.navigate(['list']);
@@ -47,15 +47,19 @@ export class DetailPage implements OnInit {
     }
 
     callAPI(student): Observable<any> {
-        const url = `https://test-node-api-test.herokuapp.com/students/${this.singleStudent._id}`;
+        const url = `http://localhost:3000/proprties/${this.singleProperty._id}`;
         console.log('link', url);
         return this.http.delete(url);
     }
 
     updateItem() {
-        const id = this.singleStudent.student_id;
+        const id = this.singleProperty.student_id;
         const url = `update/${id}`;
         console.log(url);
         this.router.navigateByUrl(url);
+    }
+
+    contactDealer(contactNumber: any) {
+        alert('You can contactwith owner via ' + contactNumber + ' Number.');
     }
 }

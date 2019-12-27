@@ -4,50 +4,47 @@
       <ion-back-button></ion-back-button>
       <!-- <ion-menu-button></ion-menu-button> -->
     </ion-buttons>
-    <ion-title>Update</ion-title>
+    <ion-title>Add Property</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-grid class="ion-padding-top">
-    <ion-text>Update field</ion-text>
+    <ion-text> Please fill up the information</ion-text>
     <div [formGroup]="signupForm">
       <ion-item>
         <ion-label position="floating">Owner Name</ion-label>
         <ion-input formControlName="owner"></ion-input>
       </ion-item>
       <ion-item>
-
-        <ion-label position="floating">property Type</ion-label>
+        <ion-label position="floating">Type</ion-label>
         <ion-input formControlName="type"></ion-input>
       </ion-item>
       <ion-item>
-
-      <ion-label position="floating">Area</ion-label>
-      <ion-textarea formControlName="area" ></ion-textarea>
-    </ion-item>
-
-      <ion-item>
-        <ion-label position="floating">Price</ion-label>
-        <ion-textarea formControlName="price" ></ion-textarea>
+        <ion-label position="floating">Area</ion-label>
+        <ion-textarea formControlName="area"></ion-textarea>
       </ion-item>
       <ion-item>
+        <ion-label position="floating">Price</ion-label>
+        <ion-textarea formControlName="price"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
         <ion-label position="floating">Contact Number</ion-label>
-        <ion-textarea formControlName="contactNumber" ></ion-textarea>
+        <ion-textarea formControlName="contact"></ion-textarea>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Description</ion-label>
-        <ion-textarea formControlName="description" ></ion-textarea>
+        <ion-textarea formControlName="description"></ion-textarea>
       </ion-item>
+
       <ion-item>
         <ion-label position="floating">Location</ion-label>
-        <ion-textarea formControlName="location" ></ion-textarea>
+        <ion-textarea formControlName="location"></ion-textarea>
       </ion-item>
-
       <ion-grid class="ion-padding-top">
         <ion-row class="ion-justify-content-center">
-
-          <ion-button (click)="updateData()" shape="square" [disabled]="!signupForm.valid">Save</ion-button>
+          <ion-button (click)="save()" shape="round" [disabled]="!signupForm.valid">Save</ion-button>
         </ion-row>
       </ion-grid>
     </div>
