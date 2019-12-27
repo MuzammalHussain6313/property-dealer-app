@@ -49,7 +49,7 @@ export class PopoverComponent implements OnInit {
   }
 
   callAPI(student): Observable<any> {
-    // delete code working correctly.
+    // delete code added and working correctly.
     const url = `http://localhost:3000/properties/${this.singleProperty._id}`;
     console.log('link', url);
     return this.http.delete(url);
