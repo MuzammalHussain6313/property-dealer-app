@@ -16,7 +16,7 @@ export class ListPage implements OnInit {
   constructor(public router: Router,
               public http: HttpClient,
               public popoverController: PopoverController) {
-    this.data = this.http.get('https://test-node-api-test.herokuapp.com/students/getStudents');
+    this.data = this.http.get('http://localhost:3000/properties/getProperties');
     this.data.subscribe(data => {
       this.result = data;
     });
@@ -29,12 +29,12 @@ export class ListPage implements OnInit {
   ngOnInit(): void {
   }
 
-  addSurah() {
-    this.router.navigate(['signup']);
+  addProperty() {
+    this.router.navigate(['addProperty']);
   }
 
   showSingleItem(item: any) {
-    const id = item.student_id;
+    const id = item._id;
     const url = `list/${id}`;
     console.log(url);
     this.router.navigateByUrl(url);
@@ -43,7 +43,7 @@ export class ListPage implements OnInit {
   async presentPopover(myEvent, item: any) {
     const popover = await this.popoverController.create({
       component: PopoverComponent,
-      componentProps: {student_id: item._id }
+      componentProps: {_id: item._id }
     });
     return await popover.present();
   }

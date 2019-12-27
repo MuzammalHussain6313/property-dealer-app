@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.page.html',
-  styleUrls: ['./signup.page.scss']
+  selector: 'app-addProperty',
+  templateUrl: './addProperty.page.html',
+  styleUrls: ['./addProperty.page.scss']
 })
-export class SignupPage implements OnInit {
+export class AddPropertyPage implements OnInit {
   signupForm: FormGroup;
 
   constructor(
@@ -24,16 +24,19 @@ export class SignupPage implements OnInit {
 
   formInitializer() {
     this.signupForm = this.formBuilder.group({
-      name: [null, [Validators.required]],
-      email: [null, [Validators.required, Validators.email]],
-      student_id: [null, [Validators.required]]
+      owner: [null, [Validators.required]],
+      type: [null, [Validators.required]],
+      area: [null, [Validators.required]],
+      price: [null, [Validators.required]],
+      contact: [null, [Validators.required]],
+      description: [null, [Validators.required]],
+      location: [null, [Validators.required]]
     });
   }
 
   save() {
     if (this.signupForm.valid) {
       console.log('formData', this.signupForm.value);
-
       const formData = this.signupForm.value;
       this.saveHttpReq(formData).subscribe(
         data => {
@@ -49,7 +52,8 @@ export class SignupPage implements OnInit {
 
   saveHttpReq(dataObj): Observable<any> {
     // const url = 'http://test-node-api-test.herokuapp.com/students/newStudent'; // This link is working coorectly.
-    const url = 'https://test-node-api-test.herokuapp.com/students/newStudent';
+    console.log(dataObj);
+    const url = 'http://localhost:3000/properties/newProperty';
     return this.http.post(url, dataObj);
   }
 }

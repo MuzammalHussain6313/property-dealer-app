@@ -13,12 +13,13 @@
   <ion-card class="welcome-card">
 <!--    <img src="/assets/quran-majeed.jpg" alt="" />-->
     <ion-card-header>
-      <ion-card-subtitle>{{singleStudent?.student_id}}</ion-card-subtitle>
-      <ion-card-title>Welcome to: {{singleStudent?.name}}</ion-card-title>
+        <ion-card-title>{{singleProperty?.owner}}</ion-card-title>
+        <ion-card-subtitle>{{singleProperty?.area}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <p>{{singleStudent?.email}} and database id is {{singleStudent?._id}} <br> Now that your app has been created, you'll want to start building out features and
-        components. Check out some of the resources below for next steps.</p>
+      <p> Mr. {{singleProperty?.owner}} wants to sale his property of {{singleProperty?.area}} in {{singleProperty?.price}}.</p>
+      <p>Location of property is {{singleProperty?.location}} and {{singleProperty?.description}}</p>
+        <ion-icon slot="end" name="ios-call" (click)="contactDealer(singleProperty?.contact)"></ion-icon>
     </ion-card-content>
   </ion-card>
 </ion-content>
