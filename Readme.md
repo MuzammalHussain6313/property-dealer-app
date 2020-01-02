@@ -1,5 +1,5 @@
-A property deade application with have following.
-
+# A property deade application with have following.
+<h3>Frontend Work</h3>
 Tools and technologies <br/>
 •	Hybrid Application, where Ionic framework and angular used for front-end.<br/>
 •	Firebase/mongo dB database and node.js will be used for backed work. 
@@ -28,5 +28,29 @@ Features in our Application.
 6.	Dealer Dashboard <br/>
 •	Dealer will able Add new property for sale. <br/>
 •	Dealer will able to remove the soled property. <br/>
-•	Dealer can update information of the property if there is an error while           entering the data.
+•	Dealer can update information of the property if there is an error while entering the data.
+
+<h1>For backend work please follow the link <a href = "https://github.com/MuzammalHussain6313/firstnodejsapp">https://github.com/MuzammalHussain6313/firstnodejsapp</a></h1>
+<h2>Screen shorts.</h2>
+
+<p>Menu.</p><br>
+<img src="screen-shorts/menue.PNG" width="400" height="700">
+<hr>
+<p>Home.</p><br>
+<img src="screen-shorts/Home.PNG" width="400" height="700">
+<hr>
+<p>List of Property.</p><br>
+<img src="screen-shorts/List.PNG" width="400" height="700">
+<hr>
+<p>Update Item</p><br>
+<img src="screen-shorts/update.PNG" width="400" height="700">
+<hr>
+<p>details</p><br>
+<img src="screen-shorts/details.PNG" width="400" height="700">
+<hr>
+<p>Add new Item</p><br>
+<img src="screen-shorts/Add.PNG" width="400" height="700">
+<hr>
+<p>Delete popover.</p><br>
+<img src="screen-shorts/update-delete.PNG" width="400" height="700">
 
