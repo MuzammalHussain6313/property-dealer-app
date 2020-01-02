@@ -34,23 +34,23 @@ Features in our Application.
 <h2>Screen shorts.</h2>
 
 <p>Menu.</p><br>
-<img src="screen-shorts/menue.PNG" width="500" height="700">
+<img src="screen-shorts/menue.PNG" width="400" height="700">
 <hr>
 <p>Home.</p><br>
-<img src="screen-shorts/Home.PNG" width="500" height="700">
+<img src="screen-shorts/Home.PNG" width="400" height="700">
 <hr>
 <p>List of Property.</p><br>
-<img src="screen-shorts/List.PNG" width="500" height="700">
+<img src="screen-shorts/List.PNG" width="400" height="700">
 <hr>
 <p>Update Item</p><br>
-<img src="screen-shorts/update.PNG" width="500" height="700">
+<img src="screen-shorts/update.PNG" width="400" height="700">
 <hr>
 <p>details</p><br>
-<img src="screen-shorts/details.PNG" width="500" height="700">
+<img src="screen-shorts/details.PNG" width="400" height="700">
 <hr>
 <p>Add new Item</p><br>
-<img src="screen-shorts/Add.PNG" width="500" height="700">
+<img src="screen-shorts/Add.PNG" width="400" height="700">
 <hr>
 <p>Delete popover.</p><br>
-<img src="screen-shorts/update-delete.PNG" width="500" height="700">
+<img src="screen-shorts/update-delete.PNG" width="400" height="700">
 
