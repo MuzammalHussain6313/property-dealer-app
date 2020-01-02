@@ -30,11 +30,11 @@ Features in our Application.
 •	Dealer will able to remove the soled property. <br/>
 •	Dealer can update information of the property if there is an error while entering the data.
 
-<h1>For backend work please follow the link <a href = "https://github.com/MuzammalHussain6313/firstnodejsapp">https://github.com/MuzammalHussain6313/firstnodejsapp</a></h1>
-<h2>Screen shorts.</h2>
+<h3>For backend work please follow the link <a href = "https://github.com/MuzammalHussain6313/firstnodejsapp">https://github.com/MuzammalHussain6313/firstnodejsapp</a></h3>
+<h4>Screen shorts.</h4>
 
 <p>Menu.</p><br>
-<img src="screen-shorts/menue.PNG" width="400" height="700">
+<img src="screen-shorts/Menue.PNG" width="400" height="700">
 <hr>
 <p>Home.</p><br>
 <img src="screen-shorts/Home.PNG" width="400" height="700">
