@@ -23,7 +23,7 @@ export class PopoverComponent implements OnInit {
   ngOnInit() {
     this.id = this.navParams.data._id;
     console.log('id ' + this.id);
-    this.http.get('http://localhost:3000/properties/getProperties').subscribe(res => {
+    this.http.get('http://test-node-api-test.herokuapp.com/properties/getProperties').subscribe(res => {
       this.propertyList = res;
       this.route.paramMap.subscribe(paramMap => {
         this.singleProperty = this.propertyList.find(obj => {
@@ -50,7 +50,7 @@ export class PopoverComponent implements OnInit {
 
   callAPI(student): Observable<any> {
     // delete code added and working correctly.
-    const url = `http://localhost:3000/properties/${this.singleProperty._id}`;
+    const url = `http://test-node-api-test.herokuapp.com/properties/${this.singleProperty._id}`;
     console.log('link', url);
     return this.http.delete(url);
   }

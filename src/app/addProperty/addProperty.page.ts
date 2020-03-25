@@ -53,7 +53,7 @@ export class AddPropertyPage implements OnInit {
   saveHttpReq(dataObj): Observable<any> {
     // const url = 'http://test-node-api-test.herokuapp.com/students/newStudent'; // This link is working coorectly.
     console.log(dataObj);
-    const url = 'http://localhost:3000/properties/newProperty';
+    const url = 'http://test-node-api-test.herokuapp.com/properties/newProperty';
     return this.http.post(url, dataObj);
   }
 }

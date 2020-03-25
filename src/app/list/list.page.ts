@@ -16,7 +16,7 @@ export class ListPage implements OnInit {
   constructor(public router: Router,
               public http: HttpClient,
               public popoverController: PopoverController) {
-    this.data = this.http.get('http://localhost:3000/properties/getProperties');
+    this.data = this.http.get('https://test-node-api-test.herokuapp.com/properties/getProperties');
     this.data.subscribe(data => {
       this.result = data;
     });
